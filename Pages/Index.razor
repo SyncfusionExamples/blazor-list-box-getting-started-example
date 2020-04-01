@@ -1,0 +1,61 @@
+﻿@page "/"
+
+<div class="control_wrapper">
+    <SfListBox DataSource="@Games" TValue="string[]" TItem="GamesData">
+        <ListBoxFieldSettings Value="ID" Text="Name">
+        </ListBoxFieldSettings>
+    </SfListBox>
+
+    @*Remote Data Source code snippet*@
+    @*<SfListBox TValue="string[]" TItem="EmployeeData">
+            <ListBoxFieldSettings Value="EmployeeID" Text="FirstName">
+            </ListBoxFieldSettings>
+            <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees"
+                           Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"
+                           CrossDomain=true>
+            </SfDataManager>
+        </SfListBox>*@
+</div>
+
+
+
+@code {
+
+    //Remote Data Source code snippet
+
+    //public class EmployeeData
+    //{
+    //    public int EmployeeID { get; set; }
+    //    public string FirstName { get; set; }
+    //    public string Designation { get; set; }
+    //    public string Country { get; set; }
+    //}
+
+    public class GamesData
+    {
+        public string ID { get; set; }
+        public string Name { get; set; }
+    }
+
+    List<GamesData>
+    Games = new List<GamesData>
+        {
+        new GamesData() { ID= "Game1", Name= "Badminton" },
+        new GamesData() { ID= "Game2", Name= "Basketball" },
+        new GamesData() { ID= "Game3", Name= "Cricket" },
+        new GamesData() { ID= "Game4", Name= "Football" },
+        new GamesData() { ID= "Game5", Name= "Golf" },
+        new GamesData() { ID= "Game6", Name= "Hockey" },
+        new GamesData() { ID= "Game7", Name= "Tennis"},
+        };
+        }
+
+        <style>
+            .control_wrapper {
+                width: 250px;
+                margin-left: 35%;
+                margin-right: 35%;
+                margin-top: 12%;
+                margin-bottom: 15%;
+            }
+        </style>
