@@ -6,7 +6,7 @@ A quick overview on how to create and configure the Syncfusion Blazor ListBox in
 
 **Documentation**: https://blazor.syncfusion.com/documentation/listbox/getting-started 
 
-## Project pre-requisites
+## Prerequisites
 
 * Visual Studio 2022
 
