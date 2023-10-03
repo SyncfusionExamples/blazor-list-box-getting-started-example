@@ -5,31 +5,9 @@
         <ListBoxFieldSettings Value="ID" Text="Name">
         </ListBoxFieldSettings>
     </SfListBox>
-
-    @*Remote Data Source code snippet*@
-    @*<SfListBox TValue="string[]" TItem="EmployeeData">
-            <ListBoxFieldSettings Value="EmployeeID" Text="FirstName">
-            </ListBoxFieldSettings>
-            <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees"
-                           Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"
-                           CrossDomain=true>
-            </SfDataManager>
-        </SfListBox>*@
 </div>
 
-
-
 @code {
-
-    //Remote Data Source code snippet
-
-    //public class EmployeeData
-    //{
-    //    public int EmployeeID { get; set; }
-    //    public string FirstName { get; set; }
-    //    public string Designation { get; set; }
-    //    public string Country { get; set; }
-    //}
 
     public class GamesData
     {
